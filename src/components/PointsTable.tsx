@@ -62,7 +62,7 @@ export function PointsTable({ seriesId }: PointsTableProps) {
       </div>
 
       {/* Data rows */}
-      {rows.map((row, i) => (
+      {[...rows].sort((a, b) => b.points - a.points || parseFloat(b.nrr) - parseFloat(a.nrr)).map((row, i) => (
         <div
           key={row.team}
           className={[
