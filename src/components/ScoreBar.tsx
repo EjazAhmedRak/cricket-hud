@@ -31,7 +31,7 @@ type Panel = "none" | "matches" | "points" | "settings";
 
 const log = createLogger("ScoreBar");
 
-// Heights in physical pixels
+// Heights in logical pixels (DPI-independent, matches tauri.conf.json)
 const COMPACT_H  = 56;
 const PANEL_H    = 320;
 
